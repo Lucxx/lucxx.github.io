@@ -7,6 +7,35 @@
     --muted: #b8b8b8;
     --border: rgba(255, 255, 255, 0.14);
     --accent: #ffffff;
+    --hero-overlay-1: rgba(0,0,0,0.70);
+    --hero-overlay-2: rgba(0,0,0,0.75);
+    --navbar-bg: rgba(7, 7, 7, 0.55);
+}
+
+:root[data-theme="light"] {
+    --bg: #fafafa;
+    --bg-soft: #f0f0f0;
+    --card: rgba(0, 0, 0, 0.04);
+    --card-hover: rgba(0, 0, 0, 0.07);
+    --text: #0a0a0a;
+    --muted: #5a5a5a;
+    --border: rgba(0, 0, 0, 0.12);
+    --accent: #0a0a0a;
+    --hero-overlay-1: rgba(255,255,255,0.78);
+    --hero-overlay-2: rgba(255,255,255,0.82);
+    --navbar-bg: rgba(250, 250, 250, 0.65);
+}
+
+body,
+.navbar,
+.hero,
+.card,
+.btn,
+.skill,
+.stat,
+.achievement,
+.comp-row {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
 
 * {
@@ -40,7 +69,7 @@ a {
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
-    background: rgba(7, 7, 7, 0.55);
+    background: var(--navbar-bg);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
 }
@@ -56,8 +85,8 @@ a {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: white;
-    color: black;
+    background: var(--accent);
+    color: var(--bg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +105,29 @@ a {
 }
 
 .navbar nav a:hover {
-    color: white;
+    color: var(--text);
+}
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 24px;
+}
+
+.theme-toggle:hover {
+    background: var(--accent);
+    color: var(--bg);
+    transform: rotate(15deg);
 }
 
 .hero {
@@ -92,8 +143,8 @@ a {
 
     background:
         linear-gradient(
-            rgba(0,0,0,0.70),
-            rgba(0,0,0,0.75)
+            var(--hero-overlay-1),
+            var(--hero-overlay-2)
         ),
         url("assets/images/space.jpg");
 
@@ -138,7 +189,7 @@ a {
     letter-spacing: -8px;
     font-weight: 900;
     color: transparent;
-    -webkit-text-stroke: 2px white;
+    -webkit-text-stroke: 2px var(--accent);
 }
 
 .hero-subtitle {
@@ -173,13 +224,13 @@ a {
 }
 
 .btn.primary {
-    background: white;
-    color: black;
+    background: var(--accent);
+    color: var(--bg);
 }
 
 .btn.secondary {
     background: var(--card);
-    color: white;
+    color: var(--text);
 }
 
 .btn:hover {
@@ -206,8 +257,8 @@ a {
 }
 
 .socials a:hover {
-    background: white;
-    color: black;
+    background: var(--accent);
+    color: var(--bg);
     transform: translateY(-4px);
 }
 
@@ -244,7 +295,7 @@ a {
 }
 
 strong {
-    color: white;
+    color: var(--text);
 }
 
 .info-box,
@@ -342,13 +393,13 @@ strong {
 .skill {
     text-align: center;
     font-weight: 700;
-    color: white;
+    color: var(--text);
     transition: 0.3s;
 }
 
 .skill:hover {
-    background: white;
-    color: black;
+    background: var(--accent);
+    color: var(--bg);
     transform: translateY(-5px);
 }
 
@@ -438,8 +489,8 @@ strong {
 }
 
 .status-done {
-    background: rgba(255, 255, 255, 0.14);
-    color: white;
+    background: var(--card-hover);
+    color: var(--text);
 }
 
 .status-progress {
@@ -474,7 +525,7 @@ strong {
 }
 
 .see-more:hover {
-    color: white;
+    color: var(--text);
     gap: 12px;
 }
 
@@ -543,22 +594,22 @@ strong {
     border-radius: 14px;
     border: 1px solid var(--border);
     background: rgba(0, 0, 0, 0.25);
-    color: white;
+    color: #ffffff;
     outline: none;
     font-family: inherit;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: white;
+    border-color: var(--accent);
 }
 
 .contact-form button {
     padding: 15px;
     border-radius: 999px;
     border: none;
-    background: white;
-    color: black;
+    background: var(--accent);
+    color: var(--bg);
     font-weight: 800;
     cursor: pointer;
     transition: 0.3s;

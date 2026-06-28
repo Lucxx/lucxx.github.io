@@ -25,6 +25,10 @@
         <a href="#veille">Veille</a>
         <a href="#contact">Contact</a>
     </nav>
+
+    <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème" title="Changer de thème">
+        <i class='bx bx-moon'></i>
+    </button>
 </header>
 
 <main>
@@ -88,7 +92,7 @@
         </div>
 
         <p>
-            Durant mon stage, j'ai repris et fait évoluer un pipeline Python existant d'analyse de
+            Durant mon stage, ma plus grosse tâche a été de reprendre et faire évoluer un pipeline Python existant d'analyse de
             rentabilité Amazon FBA, en le rendant fiable, complet et exploitable sur l'ensemble
             des marketplaces européens et internationaux.
         </p>
@@ -274,23 +278,23 @@
 
         <div class="comp-row">
             <span class="comp-name">Gérer le patrimoine informatique</span>
-            <span>Fiabilisation du pipeline Python (statuts, ROI, parsing des frais) et gestion
-                de la base MySQL centralisant 129 600 lignes sur 16 marketplaces.</span>
-            <span class="comp-date">27/04/26 - 26/06/26</span>
+            <span>Conception d'un outil automatisé via Selenium pour récupérer les informations
+                des produits sur Seller AMP.</span>
+            <span class="comp-date">27/04/26 - 04/05/26</span>
         </div>
 
         <div class="comp-row">
             <span class="comp-name">Mettre à disposition un service informatique</span>
-            <span>Optimisation des appels API (batch, parallélisation, rate limiting) et export
-                automatisé d'un fichier Excel mis en forme par marketplace.</span>
-            <span class="comp-date">27/04/26 - 26/06/26</span>
+            <span>Développement d'un outil central de gestion des stocks réunissant plusieurs
+                marketplaces ensemble.</span>
+            <span class="comp-date">05/05/26 - 15/05/26</span>
         </div>
 
         <div class="comp-row">
-            <span class="comp-name">Organiser son développement professionnel</span>
-            <span>Création d'un script de test autonome pour comprendre, vérifier et démontrer
-                le fonctionnement réel de l'API Amazon SP-API.</span>
-            <span class="comp-date">27/04/26 - 26/06/26</span>
+            <span class="comp-name">Gérer le patrimoine informatique</span>
+            <span>Développement et optimisation d'un outil d'analyse de rentabilité Amazon FBA
+                multi-marketplaces (16 pays).</span>
+            <span class="comp-date">16/05/26 - 10/06/26</span>
         </div>
     </div>
 </section>
@@ -386,6 +390,28 @@
 </section>
 
 </main>
+
+<script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+
+    function applyTheme(theme) {
+        root.setAttribute('data-theme', theme);
+        toggleBtn.innerHTML = theme === 'light'
+            ? "<i class='bx bx-sun'></i>"
+            : "<i class='bx bx-moon'></i>";
+        localStorage.setItem('theme', theme);
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    applyTheme(saved || (prefersLight ? 'light' : 'dark'));
+
+    toggleBtn.addEventListener('click', () => {
+        const current = root.getAttribute('data-theme');
+        applyTheme(current === 'light' ? 'dark' : 'light');
+    });
+</script>
 
 </body>
 </html>
