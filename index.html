@@ -19,10 +19,10 @@
     <nav>
         <a href="#accueil">Accueil</a>
         <a href="#about">À propos</a>
+        <a href="#parcours">Parcours</a>
         <a href="#stage">Stage</a>
         <a href="#projets">Projets</a>
         <a href="#competences-bts">Compétences BTS</a>
-        <a href="#veille">Veille</a>
         <a href="#contact">Contact</a>
     </nav>
 
@@ -35,9 +35,9 @@
 
 <section id="accueil" class="hero">
     <div class="hero-content">
-        <p class="badge">Disponible pour une alternance</p>
         <h1>LUCAS SONG</h1>
-        <p class="hero-subtitle">Développeur full stack & logiciels </p>
+        <p class="badge">Disponible pour une alternance</p>
+        <p class="hero-subtitle">Développeur full stack & logiciels</p>
         <p class="hero-text">
             Étudiant en BTS SIO SLAM, je développe des applications web,
             des outils d'automatisation et des solutions connectées à des API.
@@ -81,6 +81,28 @@
     </div>
 </section>
 
+<section class="section">
+    <p class="section-label">Parcours</p>
+    <h2>Formation</h2>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>BTS SIO SLAM</h3>
+            <p>IPSSI Val d'Europe · 2025 - 2027</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Classe préparatoire CPGE-PCSI</h3>
+            <p>Lycée Paul Éluard · septembre à octobre 2025</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Baccalauréat général</h3>
+            <p>Lycée Emily Brontë · 2022 - 2025</p>
+        </div>
+    </div>
+</section>
+
 <section id="stage" class="section">
     <p class="section-label">Expérience professionnelle</p>
     <h2>Stage chez METM</h2>
@@ -88,13 +110,11 @@
     <div class="stage-card">
         <div>
             <h3>Développeur Python / Automatisation e-commerce</h3>
-            <p class="date">Avril 2026 - Juin 2026</p>
+            <p class="date">27 Avril 2026 - 26 Juin 2026</p>
         </div>
 
         <p>
-            Durant mon stage, ma plus grosse tâche a été de reprendre et faire évoluer un pipeline Python existant d'analyse de
-            rentabilité Amazon FBA, en le rendant fiable, complet et exploitable sur l'ensemble
-            des marketplaces européens et internationaux.
+            METM est une entreprise spécialisée dans le e-commerce qui fait du reconditionnement et revente de matériel informatique en ligne sur les places de marché internationales (Amazon, Cdiscount, Back Market, eBay).
         </p>
 
         <div class="missions">
@@ -156,9 +176,7 @@
             <div>
                 <h4>Extension à 16 marketplaces internationaux</h4>
                 <p>
-                    Ajout de sept marketplaces (Irlande, Émirats, Arabie Saoudite, Égypte, Turquie,
-                    Afrique du Sud, Inde) avec gestion des conversions de devises pour le calcul
-                    des frais estimés (AED, SAR, EGP, TRY, ZAR, INR).
+                    Extension du pipeline pour couvrir 16 marketplaces Amazon avec conversion automatique des devises et adaptation aux particularités de chaque marketplace.
                 </p>
             </div>
         </div>
@@ -270,60 +288,52 @@
 
     <div class="comp-table">
         <div class="comp-row comp-head">
-            <span>Compétence</span>
-            <span>Réalisation associée</span>
+            <span>Compétence (Référentiel BTS SIO)</span>
+            <span>Description détaillée de la réalisation</span>
+            <span>Technologies & Livrables</span>
             <span>Période</span>
         </div>
 
         <div class="comp-row">
-            <span class="comp-name">Gérer le patrimoine informatique</span>
-            <span>Conception d'un outil automatisé via Selenium pour récupérer les informations
-                des produits sur Seller AMP.</span>
-            <span class="comp-date">27/04/26 - 04/05/26</span>
-        </div>
-
-        <div class="comp-row">
-            <span class="comp-name">Mettre à disposition un service informatique</span>
-            <span>Développement d'un outil central de gestion des stocks réunissant plusieurs
-                marketplaces ensemble.</span>
-            <span class="comp-date">05/05/26 - 15/05/26</span>
-        </div>
-
-        <div class="comp-row">
-            <span class="comp-name">Gérer le patrimoine informatique</span>
-            <span>Développement et optimisation d'un outil d'analyse de rentabilité Amazon FBA
-                multi-marketplaces (16 pays).</span>
+            <span class="comp-name"><strong>Gérer le patrimoine informatique</strong></span>
+            <span>Maintenance corrective, refactoring et fiabilisation d’un pipeline applicatif Python existant d'analyse financière (calculs de ROI, traitement des valeurs nulles).</span>
+            <span>Python, Git, Traitement Batch</span>
             <span class="comp-date">16/05/26 - 26/06/26</span>
         </div>
-    </div>
-</section>
 
-<section id="veille" class="section">
-    <p class="section-label">Auto-formation</p>
-    <h2>Veille technologique</h2>
-
-    <div class="about-grid">
-        <div>
-            <p>
-                Pendant mon stage, j'ai dû me former en autonomie à l'API Amazon Selling Partner en m'appuyant principalement sur la documentation
-                officielle développeur d'Amazon, en passant des appels avec Amazon et sur des retours d'expérience trouvés sur
-                GitHub Issues pour comprendre des comportements non documentés de l'API
-                (rejet de calcul de frais pour certains ASIN, gestion des limites de débit).
-            </p>
-            <p>
-                J'ai aussi suivi l'actualité autour des nouveaux modèles d'IA générative
-                utilisés en assistance au développement, et testé leur usage concret pour
-                accélérer le débogage et la documentation de mon propre code.
-            </p>
+        <div class="comp-row">
+            <span class="comp-name"><strong>Gérer le patrimoine informatique</strong></span>
+            <span>Conception, requêtage et exploitation d'une base de données relationnelle centralisée pour stocker les métadonnées et frais de 8 100 produits.</span>
+            <span>MySQL</span>
+            <span class="comp-date">16/05/26 - 26/06/26</span>
         </div>
 
-        <div class="info-box">
-            <p><strong>Sources suivies :</strong></p>
-            <p>Documentation officielle Amazon SP-API</p>
-            <p>GitHub Issues (selling-partner-api-models)</p>
-            <p>Documentation Python (requests, openpyxl, concurrent.futures)</p>
-            <p><strong>Contribution :</strong></p>
-            <p>Script de test réutilisable partagé en interne pour le débogage de l'API</p>
+        <div class="comp-row">
+            <span class="comp-name"><strong>Développer la présence en ligne de l'organisation</strong></span>
+            <span>Adaptation et déploiement du moteur d'analyse sur 16 marketplaces mondiales avec intégration d'algorithmes de conversion de devises à la volée.</span>
+            <span>Python, Devises mondiales</span>
+            <span class="comp-date">16/05/26 - 26/06/26</span>
+        </div>
+
+        <div class="comp-row">
+            <span class="comp-name"><strong>Mettre à disposition des utilisateurs un service informatique</strong></span>
+            <span>Optimisation algorithmique des requêtes vers l'Amazon SP-API (regroupement par paquets de 20 IDs) et implémentation d’un Rate Limiter pour respecter les quotas de l'éditeur.</span>
+            <span>Amazon SP-API, Scripting Python</span>
+            <span class="comp-date">16/05/26 - 26/06/26</span>
+        </div>
+
+        <div class="comp-row">
+            <span class="comp-name"><strong>Mettre à disposition des utilisateurs un service informatique</strong></span>
+            <span>Création d'un algorithme de secours (fallback) à 3 niveaux (FBA, FBM, puis estimation locale) pour assurer la continuité des calculs financiers en cas de défaillance réseau ou API.</span>
+            <span>Logique métier, Algorithmique</span>
+            <span class="comp-date">16/05/26 - 26/06/26</span>
+        </div>
+
+        <div class="comp-row">
+            <span class="comp-name"><strong>Mettre à disposition des utilisateurs un service informatique</strong></span>
+            <span>Automatisation des processus d'export de données volumineuses (+120k lignes) avec génération de rapports Excel structurés et script de débogage autonome.</span>
+            <span>Pandas, Openpyxl, Fichiers Excel</span>
+            <span class="comp-date">16/05/26 - 26/06/26</span>
         </div>
     </div>
 </section>
@@ -342,28 +352,6 @@
         <div class="skill">Amazon SP-API</div>
         <div class="skill">API REST</div>
         <div class="skill">Git / GitLab</div>
-    </div>
-</section>
-
-<section class="section">
-    <p class="section-label">Parcours</p>
-    <h2>Formation</h2>
-
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>BTS SIO SLAM</h3>
-            <p>IPSSI Val d'Europe · 2025 - 2027</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Classe préparatoire CPGE-PCSI</h3>
-            <p>Lycée Paul Éluard · 2025</p>
-        </div>
-
-        <div class="timeline-item">
-            <h3>Baccalauréat général</h3>
-            <p>Lycée Emily Brontë · 2022 - 2025</p>
-        </div>
     </div>
 </section>
 
