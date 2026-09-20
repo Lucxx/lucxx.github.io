@@ -420,11 +420,18 @@
             <p>📞 +33 7 78 32 31 85</p>
         </div>
 
-        <form class="contact-form" action="contact.php" method="POST">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Clé d'accès Web3Forms -->
+            <input type="hidden" name="access_key" value="b2b7fdd6-14ea-4043-8302-c757dc4e6ef9">
+
             <input type="text" name="nom" placeholder="Nom complet" required>
             <input type="email" name="email" placeholder="Adresse email" required>
             <input type="text" name="sujet" placeholder="Sujet" required>
             <textarea name="message" rows="6" placeholder="Votre message..." required></textarea>
+
+            <!-- Champ anti-spam invisible -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
             <button type="submit">Envoyer le message</button>
         </form>
     </div>
